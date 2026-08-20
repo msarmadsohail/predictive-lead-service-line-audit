@@ -1,0 +1,103 @@
+\begin{thebibliography}{10}
+
+\bibitem{abernethy2018}
+Jacob Abernethy, Alex Chojnacki, Arya Farahi, Eric Schwartz, and Jared Webb.
+\newblock {ActiveRemediation}: The search for lead pipes in {Flint},
+  {Michigan}, 2018.
+\newblock arXiv:1806.10692.
+
+\bibitem{chojnacki2017}
+Alex Chojnacki, Chengyu Dai, Arya Farahi, Guangsha Shi, Jared Webb, Daniel~T.
+  Zhang, Jacob Abernethy, and Eric Schwartz.
+\newblock A data science approach to understanding residential water
+  contamination in {Flint}, 2017.
+\newblock arXiv:1610.00580.
+
+\bibitem{deheer2023}
+Katie Deheer, Kristin Epstein, and Joanna Cummings.
+\newblock Predictive modeling in service line inventory development.
+\newblock {\em Journal AWWA}, 2023.
+\newblock doi:10.1002/awwa.2193.
+
+\bibitem{goovaerts2023}
+Pierre Goovaerts.
+\newblock Geospatial model of composition of water service lines in {Flint},
+  {Michigan}: Validation using excavation data and a new compositional
+  geostatistical approach.
+\newblock {\em AWWA Water Science}, 5(2), 2023.
+\newblock doi:10.1002/aws2.1331.
+
+\bibitem{review2021}
+Kelsey Hensley, Valerie Bosscher, Simoni Triantafyllidou, and Darren~A. Lytle.
+\newblock Lead service line identification: A review of strategies and
+  approaches.
+\newblock {\em AWWA Water Science}, 3(3), 2021.
+\newblock doi:10.1002/aws2.1226.
+
+\bibitem{acsest2026}
+Ayomide~Zul Kazeem and Xiong~Bill Yu.
+\newblock Non-invasive detection of lead connection pipe with machine learning
+  model.
+\newblock {\em ACS ES\&T Water}, 2026.
+\newblock doi:10.1021/acsestwater.5c00710.
+
+\bibitem{mappluto}
+{New York City Department of City Planning}.
+\newblock {MapPLUTO} (primary land use tax lot output), 2026.
+\newblock NYC Open Data dataset 64uk-42ks; 858,602 tax lots retrieved
+  2026-08-18.
+
+\bibitem{nysdohguidance2025}
+{New York State Department of Health}.
+\newblock Service line inventory guidance, lead and copper rule revisions
+  ({LCRR}), version 3, 2025.
+\newblock Version 3, August 2025.
+  \url{https://www.health.ny.gov/environmental/water/drinking/docs/service_line_inventory_guidance_lcrr.pdf},
+  retrieved 2026-08-19.
+
+\bibitem{nyslsl2026}
+{New York State Department of Health}.
+\newblock New york state lead service line inventory, 2026.
+\newblock Socrata dataset j63k-4n92, health.data.ny.gov. Snapshot 2026-08-11,
+  SHA-256 09863347205b24f34d9d8a31e843acdba2a40645a6b0c97a2454da2fef150723;
+  snapshot 2025-06-22, SHA-256
+  07255d1cd03551c7125d89629b55706dc591e204a4a72b82ef9bc994cbf38f56.
+
+\bibitem{nysdohsummary}
+{New York State Department of Health}.
+\newblock Summary of lead service line inventory: {New York City} water supply
+  system ({NY7003493}), 2026.
+\newblock
+  \url{https://www.health.ny.gov/environmental/water/drinking/service_line/NY7003493.htm},
+  retrieved 2026-08-20.
+
+\bibitem{nigra2023}
+Anne~E. Nigra, Wil Lieberman-Cribbin, Benjamin~C. Bostick, Steven~N. Chillrud,
+  and Daniel Carri{\'o}n.
+\newblock Geospatial assessment of racial/ethnic composition, social
+  vulnerability, and lead water service lines in {New York City}.
+\newblock {\em Environmental Health Perspectives}, 131(8):087015, 2023.
+\newblock doi:10.1289/EHP12276.
+
+\bibitem{osc2026}
+{Office of the New York State Comptroller}.
+\newblock Lead service line replacement program and lead service line
+  inventory.
+\newblock Technical Report Report 2024-S-9, Division of State Government
+  Accountability, 2026.
+\newblock issued 2026-01-05; audit period March 2018 to June 2025.
+
+\bibitem{bennington2023}
+Patrick Smart, Liam McRae, Casey Formal, and Darren~A. Lytle.
+\newblock Development and optimization of a systematic approach to identifying
+  lead service lines: One community's success.
+\newblock {\em Water Research}, 2023.
+\newblock doi:10.1016/j.watres.2023.120725.
+
+\bibitem{lcrr2021}
+{US Environmental Protection Agency}.
+\newblock National primary drinking water regulations: Lead and copper rule
+  revisions ({LCRR}), 2021.
+\newblock 40 CFR Parts 141 and 142.
+
+\end{thebibliography}

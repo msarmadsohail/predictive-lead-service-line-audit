@@ -1,0 +1,6 @@
+# Bulk data captures: provenance is committed, bytes are not.
+*.csv
+*.csv.gz
+work/
+__pycache__/
+.venv/
