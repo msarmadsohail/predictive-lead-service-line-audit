@@ -24,7 +24,7 @@
 \newcommand{\KO}{\textsf{Known Other}}
 \newcommand{\CBL}{\textsf{Unknown but could be lead}}
 
-\title{\bfseries Auditing Predictive Lead Service-Line\\
+\title{\bfseries Auditing Recorded Predictive Lead Service-Line\\
 Classifications Against Physical Verification:\\
 A Statewide Study of New York}
 
@@ -44,6 +44,9 @@ Under the US Lead and Copper Rule Revisions, a water utility may determine a ser
 material with a statistical or predictive model instead of physically inspecting it. New
 York State publishes, per address, which method was used, which makes those model outputs
 auditable against physical verification performed by the same utilities in the same places.
+Almost no address carries both, so throughout this paper the comparison is between two
+populations inside one utility rather than between a prediction and an excavation at the same
+address.
 
 We screen all 153 New York localities, the finest reporting unit the file publishes, that
 classified at least 100 addresses this way. \textbf{Seventy-five of them (49\%), covering
@@ -57,8 +60,8 @@ East Rochester, an unrelated utility 550\,km away that reproduces the pattern ex
 New York City is the largest case. A predictive model is the recorded basis for 43,215
 addresses, and on all of them the recorded material takes a single value: \KO{}, the state
 template's term for a line whose lead status is known to be negative but whose material is
-not named. The city is not short of a way to say otherwise. It records \textsf{Unknown} on
-121,779 addresses, including 1,880 it had already excavated, and lead on 120,692. In the
+not named. The city has other values available and uses them heavily: \textsf{Unknown} on
+121,779 addresses, 1,880 of which it had already excavated, and lead on 120,692. In the
 model bucket both counts are zero, and from zero events in 43,215 the 95\% upper bound on the
 rate is 0.0085\%. Across the rest of New York the same method records lead or the hedge \CBL{}
 on 12.21\% of 176,888 addresses. We report that comparison with its two weaknesses attached:
@@ -81,7 +84,7 @@ public-side determination did not exist then: it was created by copying a custom
 output, for a different pipe with a different owner.
 \end{abstract}
 
-\section{Introduction}
+\section{Introduction}\label{sec:intro}
 
 The Lead and Copper Rule Revisions (LCRR) required every US community water system to publish
 an inventory of its service lines by October 2024 \cite{lcrr2021}. Where a utility does not
@@ -93,12 +96,24 @@ Whether the models work is asked less often than it should be, for a structural 
 party best placed to validate a model is the vendor that sold it, and the utility that bought
 it has little incentive to fund a check that could invalidate an inventory it has filed.
 
-\paragraph{Has this not been done for Flint?}
-Once, and the result was not flattering. Goovaerts \cite{goovaerts2023} validated a 2017
+\paragraph{Scope of the claim.}
+The inventory records what a utility filed, not what a model produced. We therefore name no
+vendor, make no claim about any vendor's model, and report no accuracy figure. An output with
+no variation is consistent with a model that is confident and wrong; with a workflow that
+sends uncertain predictions to a crew and records the model only on the lines it cleared; and
+with a reporting pipeline that discards uncertainty before filing. What we audit is the
+published record, and whether it meets the conditions the state attaches to the values used in
+it. Section~\ref{sec:nyc} returns to these three readings and tests them against each other
+where the data allows. Two of our findings need no comparison group and no estimator, and they
+are the ones we would defend first: the pre-1940 subgroup in Section~\ref{sec:nyc} and the
+archived snapshot in Section~\ref{sec:data}.
+
+\paragraph{Prior validation against excavation: Flint.}
+One study exists. Goovaerts \cite{goovaerts2023} validated a 2017
 geospatial model against 26,750 excavations covering roughly half of Flint's tax parcels and
 reported an AUC of 0.9 for copper and galvanized material but 0.6 for lead, barely better
 than chance, improving to 0.8 only after replacing the kriging method with a compositional
-variant. It is the closest precedent that exists and it deserves answering directly.
+variant.
 
 It does not close the question. Flint is one city, and the most intensively studied water
 system in the world since 2016 \cite{chojnacki2017,abernethy2018}. The model validated there
@@ -285,7 +300,7 @@ lines and found lead in 9.69\% of them. All 557 were opened by excavation, not b
 field inspection, so the contradiction does not rest on the weaker of the two physical
 methods. New York City is not an anomaly of scale.
 
-\paragraph{Troy is the weak member of the seven.}
+\paragraph{Troy.}
 Its 187 model classifications sit against 325 verified lines carrying five lead findings, so
 the expected count under its own rate is three and a zero is unsurprising ($P = 0.055$). We
 leave it in the table because the screen's threshold was fixed in advance and removing a case
@@ -336,16 +351,16 @@ Two rows in Table~\ref{tab:methods} return no lead. \textsf{Not verified} return
 it records nothing: all of its addresses are unknown. The predictive model returns none while
 recording a determination on every address. Its 43,215 classifications take one value, \KO{}.
 
-\paragraph{The comparison that stays inside the city.}
+\paragraph{The within-city comparison.}
 The strongest form of the finding needs no other utility. New York City has a value for a line
 whose lead status is not established, \textsf{Unknown}, and it is in heavy use: 121,779
 addresses, of which 49,365 were classified from records and 1,880 had already been excavated.
 The city records lead on 120,692 addresses. Both counts are zero in the model bucket, on all
-43,215 of it. One filer, one template, one submission: every other basis of classification
-produces both values and this one produces neither. From zero events in 43,215 the 95\% upper
-bound on the rate is 0.0085\%.
+43,215 of it. These are the same filer, the same template and the same reporting period, and
+every other basis of classification in Table~\ref{tab:methods} produces both values. From zero
+events in 43,215 the 95\% upper bound on the rate is 0.0085\%.
 
-\paragraph{The comparison that leaves it, and what is wrong with it.}
+\paragraph{Comparison with the rest of the state.}
 Elsewhere in the state the same method uses more of the vocabulary: across 176,888 addresses
 outside the city it records lead on 3.57\%, the hedge \CBL{} on a further 8.64\%, 12.21\%
 together, and also \textsf{Copper}, \textsf{Plastic}, \textsf{Galvanized} and
@@ -353,8 +368,9 @@ together, and also \textsf{Copper}, \textsf{Plastic}, \textsf{Galvanized} and
 then two reasons not to lean on it. First, the lead component is one city: 5,885 of the 6,320
 rest-of-state model lead findings, 93\%, are Poughkeepsie, which has physically verified
 nothing at all, and excluding it the outright rate falls to 0.26\% and the combined rate to
-9.26\%. Poughkeepsie may be over-calling as badly as we argue New York City is under-calling;
-it is a demonstration that the field's range is in live use, not a benchmark. Second, the
+9.26\%. Poughkeepsie may be over-calling by as much as we argue New York City is under-calling.
+We cite it to show that the field's full range is in live use, and we do not treat its rate as
+a benchmark. Second, the
 hedge is not a value the city has ever produced. Its public-side vocabulary is four values
 across all 817,375 addresses and all five methods (\KO{}, \textsf{Lead including
 lead-lined galvanized}, \textsf{Unknown} and \textsf{Galvanized}), with \CBL{},
@@ -362,22 +378,21 @@ lead-lined galvanized}, \textsf{Unknown} and \textsf{Galvanized}), with \CBL{},
 any method. So 8.64 of the 12.21 points is a value the filer never emits anywhere, and only
 the within-city contrast above is free of that.
 
-\paragraph{What this does and does not attribute.}
-The file does not name a vendor and we do not guess. We also cannot distinguish a model that
-is confident and wrong from a utility process that routes a model's uncertain outputs to
-physical verification and records the model as the basis only once it has cleared a line, or
-from a reporting pipeline that discards uncertainty before it reaches the inventory. The
-second is a defensible workflow. It is also indistinguishable, to every reader of the
-published inventory, from the first, and the guidance asks for a confidence interval
+\paragraph{What this does not attribute.}
+The three readings set out in Section~\ref{sec:intro} apply here: a model that is confident and
+wrong, a workflow that routes uncertain predictions to a crew and records the model only on
+lines it cleared, and a pipeline that discards uncertainty before filing. The second is a
+defensible way to run a utility. To every reader of the published inventory it is also
+indistinguishable from the first, and the guidance asks for a confidence interval
 \cite{nysdohguidance2025} precisely so that it would not be.
 
-\paragraph{The strongest innocent explanation, stated and answered.}
-It is this: New York City's filing pipeline is effectively binary, so any determination that
-is not lead and not unknown collapses to \KO{}, and the four-value vocabulary above is
-evidence of exactly that. The model may well have produced a distribution that the pipeline
-then flattened. We accept the first half; it is the reason this paper claims nothing about the
-model's internals and reports no accuracy figure. The second half is answered by the counts
-above. A binary pipeline still leaves \textsf{Unknown} available, and the city uses it 121,779
+\paragraph{The pipeline explanation.}
+The third reading deserves stating at its strongest, because it is the one a filer would
+offer. New York City's pipeline is effectively binary, so any determination that is not lead
+and not unknown collapses to \KO{}, and the four-value vocabulary above is evidence of exactly
+that; the model may well have produced a distribution that the pipeline then flattened. We
+accept that much, and it is why this paper claims nothing about the model's internals. What it
+does not account for is the counts above. A binary pipeline still leaves \textsf{Unknown} available, and the city uses it 121,779
 times and never once in the model bucket. \textsf{Records}, the other desk method with no site
 visit, works inside the same four values in the same city and returns lead 19.80\% of the
 time. A narrow vocabulary explains why the model bucket cannot say \textsf{Copper}. It does
@@ -457,7 +472,7 @@ direction the bias argument predicted. \textbf{We report the era-aware band: on 
 1,150--1,450 lead public-side lines among the 43,215 addresses recorded as \KO{}}, five
 boroughs, public side only.
 
-\paragraph{What the band is and is not.}
+\paragraph{Uncertainty in the band.}
 It is a spread across specifications, not a confidence interval, and the distinction matters
 because the two are far apart in size. A nonparametric bootstrap over the physically verified
 sample, 400 draws, puts sampling error on any single estimator at roughly $\pm 3\%$: borough
@@ -565,7 +580,7 @@ material is not known but lead-ban records exist \cite{nysdohguidance2025}. We r
 what both readings share: it asserts a known negative lead status, and it is not one of the
 three values available for recording an unknown.
 
-\paragraph{Building age is a proxy, and it errs in both directions.}
+\paragraph{Building age is a proxy.}
 MapPLUTO year built describes the structure, not the service line. A line may have been
 replaced after the building went up, which makes the proxy too pessimistic, and the inventory
 records no replacement dates for these addresses. The reverse case matters more here: a
