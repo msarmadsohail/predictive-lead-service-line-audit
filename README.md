@@ -1,7 +1,15 @@
-# Auditing predictive lead service-line classifications against physical verification
+# Auditing recorded predictive lead service-line classifications against physical verification
+
+[![arXiv](https://img.shields.io/badge/arXiv-2608.19922-b31b1b.svg)](https://arxiv.org/abs/2608.19922)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22039275.svg)](https://doi.org/10.5281/zenodo.22039275)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Analysis code and data provenance for a statewide audit of New York State's public Lead Service Line
 Inventory.
+
+**Paper:** [arXiv:2608.19922](https://arxiv.org/abs/2608.19922), CC BY 4.0.
+**Cite the code as** `10.5281/zenodo.22039275` — the concept DOI, which always resolves to the
+newest release. A version-specific DOI is also minted per release and freezes on that tag.
 
 Under the US Lead and Copper Rule Revisions a water utility may determine a service line's material
 with a statistical or predictive model instead of digging it up. New York publishes, per address,
